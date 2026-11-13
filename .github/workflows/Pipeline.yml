@@ -86,7 +86,7 @@ jobs:
           touch .nojekyll
 
       - name: '📤 Upload artifact: Sphinx HTML'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Documentation-HTML
           path: docs/_build/html
@@ -151,7 +151,7 @@ jobs:
 
       - name: '📤 Upload artifact: ${{ matrix.fam }} bitstream'
         if: matrix.flow == 'F4PGA'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.flow }}-${{ matrix.fam }}-Bitstream
           path: f4pga-examples/${{ matrix.fam }}/build/top.bit
@@ -172,7 +172,7 @@ jobs:
 
       - name: '📤 Upload artifact: Arty 35 bitstream'
         if: matrix.flow == 'SymbiFlow' && matrix.fam == 'xc7'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.flow }}-${{ matrix.fam }}-Bitstream
           path: f4pga-examples/${{ matrix.fam }}/counter_test/build/arty_35/top.bit
@@ -180,7 +180,7 @@ jobs:
 
       - name: '📤 Upload artifact: QuickLogic bitstream'
         if: matrix.flow == 'SymbiFlow' && matrix.fam == 'eos-s3'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.flow }}-${{ matrix.fam }}-Bitstream
           path: f4pga-examples/${{ matrix.fam }}/btn_counter/build/top.bit
@@ -221,7 +221,7 @@ jobs:
           bash -le /wrk/ice40-test.sh
 
       - name: '📤 Upload artifact: ice40 bitstream'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Lattice-ice40-Bitstream
           path: fomu-workshop/hdl/verilog/blink/build/top.bit
