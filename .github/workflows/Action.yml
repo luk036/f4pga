@@ -40,7 +40,7 @@ jobs:
           cmd: TARGET="arty_35" make -C f4pga-examples/xc7/counter_test
 
       - name: '📤 Upload artifact: Arty 35 bitstream (F4PGA)'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Action-F4PGA-arty_35-Bitstream
           path: f4pga-examples/xc7/counter_test/build/arty_35/top.bit
@@ -60,7 +60,7 @@ jobs:
             -C f4pga-examples/xc7/counter_test
 
       - name: '📤 Upload artifact: Arty 35 bitstream (SymbiFlow)'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Action-SymbiFlow-arty_35-Bitstream
           path: f4pga-examples/xc7/counter_test/build/arty_35/top.bit
@@ -87,7 +87,7 @@ jobs:
             TARGET=arty_100 make
 
       - name: '📤 Upload artifact: Arty 100 bitstream (SymbiFlow)'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Action-SymbiFlow-arty_100-Bitstream
           path: f4pga-examples/xc7/picosoc_demo/build/arty_100/top.bit
@@ -114,7 +114,7 @@ jobs:
             make
 
       - name: '📤 Upload artifact: eos-s3 bitstream (F4PGA)'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Action-F4PGA-eos-s3-Bitstream
           path: f4pga-examples/eos-s3/btn_counter/build/top.bit
@@ -132,7 +132,7 @@ jobs:
             F4PGA_USE_DEPRECATED=true make
 
       - name: '📤 Upload artifact: eos-s3 bitstream (SymbiFlow)'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Action-SymbiFlow-eos-s3-Bitstream
           path: f4pga-examples/eos-s3/btn_counter/build/top.bit
@@ -157,7 +157,7 @@ jobs:
             f4pga build --flow arty_35.json
 
       - name: '📤 Upload artifact: Arty 35 bitstream'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: arty_35-Bitstream-Verilog-Counter
           path: test/verilog/counter/build/arty_35/top.bit
@@ -185,7 +185,7 @@ jobs:
             f4pga build --flow arty_35.json
 
       - name: '📤 Upload artifact: Arty 35 bitstream'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: arty_35-Bitstream-VHDL-Counter
           path: test/vhdl/counter/build/arty_35/Arty_Counter.bit
@@ -213,7 +213,7 @@ jobs:
             f4pga build --flow arty_35.json
 
       - name: '📤 Upload artifact: Arty 35 bitstream'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: arty_35-Bitstream-VHDL-plugin-Counter
           path: test/vhdl/counter/build/arty_35/Arty_Counter.bit
